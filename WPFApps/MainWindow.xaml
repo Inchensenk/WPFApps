@@ -41,20 +41,25 @@
                 </Grid>
 
                 <!--Текстбокс с подсказкой "Введите логин", подсказка анимирует при в вводе-->
-                <TextBox materialDesign:HintAssist.Hint="Введите логин"
+                <TextBox x:Name="textBoxLogin"
+                         materialDesign:HintAssist.Hint="Введите логин"
                          Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
 
-                <PasswordBox materialDesign:HintAssist.Hint="Введите пароль"
-                         Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
+                <PasswordBox x:Name="passBox"    
+                             materialDesign:HintAssist.Hint="Введите пароль"
+                             Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
 
-                <PasswordBox materialDesign:HintAssist.Hint="Повторите пароль"
-                         Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
+                <PasswordBox x:Name="passBox2"
+                             materialDesign:HintAssist.Hint="Повторите пароль"
+                             Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
 
-                <TextBox materialDesign:HintAssist.Hint="Email"
+                <TextBox x:Name="textBoxEmail"
+                         materialDesign:HintAssist.Hint="Email"
                          Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
 
                 <Button Content="Зарегистрироваться"
-                        Margin="0 20"/>
+                        Margin="0 20"
+                        Click="OnRegButtonClick"/>
             </StackPanel>
 
         </Border>
