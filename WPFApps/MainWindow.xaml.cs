@@ -69,7 +69,7 @@ namespace WPFApps
                 textBoxEmail.ToolTip = "";
                 textBoxEmail.Background = Brushes.Transparent;
 
-                MessageBox.Show("Все гуд!");
+                MessageBox.Show("Регистрация прошла успешно!");
             }
         }
     }
