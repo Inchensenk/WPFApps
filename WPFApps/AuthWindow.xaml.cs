@@ -3,6 +3,7 @@ using System.Windows;
 using System.Windows.Media;
 using UsersApp.EntityFrameworkCore;
 using UsersApp.EntityFrameworkCore.Entities;
+using WPFApps;
 
 namespace UsersApp
 {
@@ -54,13 +55,23 @@ namespace UsersApp
                 if (authUser != null)
                 { 
                     MessageBox.Show("Авторизация прошла успешно!"); 
-                }
+                    UserPageWindow userPageWindow = new UserPageWindow();
+                    userPageWindow.Show();
+                    this.Hide();
+                } 
                 else 
                 { 
                     MessageBox.Show("Ошибка Авторизации!"); 
                 }
                
             }
+        }
+
+        private void OnRegistrationButtonClick(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Hide();
         }
     }
 }

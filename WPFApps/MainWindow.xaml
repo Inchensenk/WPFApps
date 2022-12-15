@@ -42,7 +42,8 @@
 
                     <Button HorizontalAlignment="Right"
                             Content="Авторизация"
-                            Style="{StaticResource MaterialDesignFlatButton}"/>
+                            Style="{StaticResource MaterialDesignFlatButton}"
+                            Click="OnAuthButtonClick"/>
                 </Grid>
 
                 <!--Текстбокс с подсказкой "Введите логин", подсказка анимирует при в вводе-->

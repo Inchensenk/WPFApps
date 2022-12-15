@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using UsersApp;
 using UsersApp.EntityFrameworkCore;
 using UsersApp.EntityFrameworkCore.Entities;
 
@@ -93,7 +94,26 @@ namespace WPFApps
                 db.Users.Add(user);
                 //сохраняем изменения
                 db.SaveChanges();
+
+                /*После успешной регистрации открываем окно пользователя*/
+
+                //Создаем объект окна на которое хотим переключиться при нажатии
+                AuthWindow authWindow = new AuthWindow();
+                //Отоброжаем это окно
+                authWindow.Show();
+                //Скрываем текущее окно
+                this.Hide();
             }
+        }
+
+        private void OnAuthButtonClick(object sender, RoutedEventArgs e)
+        {
+            //Создаем объект окна на которое хотим переключиться при нажатии
+            AuthWindow authWindow = new AuthWindow();
+            //Отоброжаем это окно
+            authWindow.Show();
+            //Скрываем текущее окно
+            this.Hide();
         }
     }
 }

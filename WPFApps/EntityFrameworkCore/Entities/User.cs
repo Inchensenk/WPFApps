@@ -27,6 +27,17 @@ namespace UsersApp.EntityFrameworkCore.Entities
             this.Email = email; 
             this.Pass = pass;
         }
+
+        /*
+        /// <summary>
+        /// Переопределяем метод ToString для корректного отображения пользователя в списке пользователей
+        /// </summary>
+        /// <returns>Возвращаем ту информацию о пользователе, которую хотим видеть в списке пользователей</returns>
+        public override string ToString()
+        {
+            return "Пользователь: " + Login + ". Email: " + Email;
+        }
+        */
     }
 
   
