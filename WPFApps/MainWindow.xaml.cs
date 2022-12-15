@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using UsersApp.EntityFrameworkCore;
+using UsersApp.EntityFrameworkCore.Entities;
 
 namespace WPFApps
 {
@@ -20,9 +22,21 @@ namespace WPFApps
     /// </summary>
     public partial class MainWindow : Window
     {
+        ApplicationContext db;
         public MainWindow()
         {
             InitializeComponent();
+
+            db = new ApplicationContext();
+
+            List<User> users = db.Users.ToList();
+            string str = "";
+            foreach (User user in users) 
+            {
+                str += "Login: " + user.Login + " | ";
+            }
+
+            exampleText.Text = str;
         }
 
         private void OnRegButtonClick(object sender, RoutedEventArgs e)
@@ -70,6 +84,13 @@ namespace WPFApps
                 textBoxEmail.Background = Brushes.Transparent;
 
                 MessageBox.Show("Регистрация прошла успешно!");
+
+                //Создаем новый объект на основе класса модели
+                User user = new User(login, email, pass);
+                //добавляем объект в базу данных
+                db.Users.Add(user);
+                //сохраняем изменения
+                db.SaveChanges();
             }
         }
     }

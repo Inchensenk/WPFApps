@@ -9,7 +9,7 @@ using UsersApp.EntityFrameworkCore;
 
 namespace UsersApp.Migrations
 {
-    [DbContext(typeof(AppContext))]
+    [DbContext(typeof(ApplicationContext))]
     partial class AppContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

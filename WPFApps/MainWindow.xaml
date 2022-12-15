@@ -30,6 +30,11 @@
                            FontWeight="Bold"
                            Margin="0 0 0 20"/>
 
+                <TextBlock x:Name="exampleText"
+                           Text="Дарова!"         
+                           FontWeight="Bold"
+                           Margin="0 0 0 20"/>
+
                 <!--Кнопки стилезуются стилями подключенной библиотеки Material Design In XAML-->
                 <Grid Margin="0 0 0 20">
                     <Button HorizontalAlignment="Left"

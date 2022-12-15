@@ -10,7 +10,7 @@ using UsersApp.EntityFrameworkCore;
 
 namespace UsersApp.Migrations
 {
-    [DbContext(typeof(AppContext))]
+    [DbContext(typeof(ApplicationContext))]
     [Migration("20221215121049_InitMigration")]
     partial class InitMigration
     {

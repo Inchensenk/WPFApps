@@ -9,12 +9,12 @@ using UsersApp.EntityFrameworkCore.Entities;
 
 namespace UsersApp.EntityFrameworkCore
 {
-    public class AppContext : DbContext
+    public class ApplicationContext : DbContext
     {
         private readonly StreamWriter logStream = new StreamWriter("mylog.txt", true);
 
-        DbSet<User> Users { get; set; }
-        public AppContext()
+        public DbSet<User> Users { get; set; }
+        public ApplicationContext()
         {
 
         }
