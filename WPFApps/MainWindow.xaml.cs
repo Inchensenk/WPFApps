@@ -29,6 +29,7 @@ namespace WPFApps
 
             db = new ApplicationContext();
 
+            /* Получение записей из БД
             List<User> users = db.Users.ToList();
             string str = "";
             foreach (User user in users) 
@@ -37,6 +38,7 @@ namespace WPFApps
             }
 
             exampleText.Text = str;
+            */
         }
 
         private void OnRegButtonClick(object sender, RoutedEventArgs e)
