@@ -37,6 +37,7 @@
                     <!--Шаблонный список пользователей-->
                     <ListView.ItemTemplate>
                         <DataTemplate>
+                            <!--Каждый элеммент будет состоять из трех частей: "логин" символ "," и "Email"-->
                             <WrapPanel>
                                 <TextBlock Text="{Binding Login}"
                                            FontWeight="Bold"/>

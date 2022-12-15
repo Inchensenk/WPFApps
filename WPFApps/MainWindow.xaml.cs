@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using UsersApp;
 using UsersApp.EntityFrameworkCore;
 using UsersApp.EntityFrameworkCore.Entities;
+using System.Windows.Media.Animation;//библиотека для анимации
 
 namespace WPFApps
 {
@@ -29,6 +30,23 @@ namespace WPFApps
             InitializeComponent();
 
             db = new ApplicationContext();
+
+            //Класс для создания анимации
+            DoubleAnimation btnAnimation = new DoubleAnimation();
+            //первичное состояние
+            btnAnimation.From = 0;
+            //Движение к ширине кнопки в 450 пикселей
+            btnAnimation.To = 450;
+            //Продолжительность анимации
+            btnAnimation.Duration= TimeSpan.FromSeconds(3);
+            //Обращаемся к кнопке к которой хотим применить анимацию 
+            //Вызываем метод BeginAnimation который принимает 2 параметра(1 параметр: Какое свойство будем менять у кнопки, 2 параметр: экземпляр анимации)
+            regButton.BeginAnimation(Button.WidthProperty, btnAnimation);
+
+
+
+
+
 
             /* Получение записей из БД
             List<User> users = db.Users.ToList();

@@ -63,7 +63,8 @@
                          materialDesign:HintAssist.Hint="Email"
                          Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
 
-                <Button Content="Зарегистрироваться"
+                <Button x:Name="regButton"
+                        Content="Зарегистрироваться"
                         Margin="0 20"
                         Click="OnRegButtonClick"/>
             </StackPanel>
