@@ -24,7 +24,7 @@
                                   ShadowDepth="0"/>
             </Border.Effect>
 
-            <StackPanel>
+            <StackPanel Cursor="">
                 <TextBlock Text="Дарова!"
                            FontSize="30"
                            FontWeight="Bold"
